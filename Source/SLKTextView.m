@@ -502,15 +502,6 @@ SLKPastableMediaType SLKPastableMediaTypeFromNSString(NSString *string)
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:self];
 }
 
-- (void)setFont:(UIFont *)font
-{
-    NSString *contentSizeCategory = [[UIApplication sharedApplication] preferredContentSizeCategory];
-    
-    [self setFontName:font.fontName pointSize:font.pointSize withContentSizeCategory:contentSizeCategory];
-    
-    self.initialFontSize = font.pointSize;
-}
-
 - (void)setFontName:(NSString *)fontName pointSize:(CGFloat)pointSize withContentSizeCategory:(NSString *)contentSizeCategory
 {
     if (self.isDynamicTypeEnabled) {
