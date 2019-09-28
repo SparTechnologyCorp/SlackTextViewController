@@ -93,7 +93,7 @@ NSString * const SLKTextInputbarDidMoveNotification =   @"SLKTextInputbarDidMove
     [self addSubview:self.textView];
     [self addSubview:self.charCountLabel];
     [self addSubview:self.contentView];
-    //[self addSubview:self.hairlineView];
+    [self addSubview:self.hairlineView];
 
     [self slk_setupViewConstraints];
     [self slk_updateConstraintConstants];
