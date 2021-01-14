@@ -424,6 +424,10 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
 
 - (CGFloat)slk_appropriateBottomMargin
 {
+    if (_isGroupContainerStyle == YES) {
+        return 0;
+    }
+    
     // A bottom margin is required if the view is extended out of it bounds
     if ((self.edgesForExtendedLayout & UIRectEdgeBottom) > 0) {
         
@@ -1288,6 +1292,8 @@ CGFloat const SLKAutoCompletionViewDefaultHeight = 140.0;
 
 - (void)slk_adjustContentConfigurationIfNeeded
 {
+    if (_isGroupContainerStyle == YES) { return; }
+
     UIEdgeInsets contentInset = self.scrollViewProxy.contentInset;
     
     // When inverted, we need to substract the top bars height (generally status bar + navigation bar's) to align the top of the
