@@ -47,6 +47,9 @@ UIKIT_EXTERN NSString * const SLKTextViewPastedItemData;
 /** The placeholder color. Default is lightGrayColor. */
 @property (nonatomic, copy) UIColor *_Null_unspecified placeholderColor;
 
+// The initial font point size, used for dynamic type calculations
+@property (nonatomic) CGFloat initialFontSize;
+
 /** The placeholder's number of lines. Default is 1. */
 @property (nonatomic, readwrite) NSInteger placeholderNumberOfLines;
 
