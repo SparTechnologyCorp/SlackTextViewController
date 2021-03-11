@@ -28,8 +28,6 @@ static NSString *const SLKTextViewGenericFormattingSelectorPrefix = @"slk_format
 // The label used as placeholder
 @property (nonatomic, strong) UILabel *placeholderLabel;
 
-// The initial font point size, used for dynamic type calculations
-@property (nonatomic) CGFloat initialFontSize;
 
 // Used for moving the caret up/down
 @property (nonatomic) UITextLayoutDirection verticalMoveDirection;
